@@ -25,21 +25,35 @@ body {
 /* #endregion hero */
 
 /* #region works */
-.works_container {
+.gradient-border {
+    padding: 2px;
+    border-radius: 24px;
+    background:
+    linear-gradient(228deg, rgba(255, 83, 107, 0) 0%, #ff0024 49.47%, rgba(255, 83, 107, 0) 100%),
+    
+        linear-gradient(135deg, #5581ff 0%, rgba(255, 255, 255, 0.19) 40.62%);
+    display: inline-block;
+}
+
+.works-container {
     max-width: 1200px;
     border-radius: 24px;
-    border: #fff solid 1px;
-    background-color: rgba(172, 172, 172, 0.2);
-        padding: 24px 0px 60px 0px;
-
-
+    padding: 24px 32px;
+    background: linear-gradient(to bottom, rgb(0, 0, 0, .2), rgb(236 230 233 / 19%));
 }
+
 .carousel {
     display: flex;
     gap: 32px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 20px 0;
+}
+
+img {
+    padding: 24px 24px 0;
+    background: rgba(154, 154, 162, 0.4);
+    border-radius: 8px;
 }
 
 .carousel img {
