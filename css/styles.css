@@ -1,28 +1,119 @@
 body {
     background-color: #0f0f10;
-    /* тёмная база */
-    background-image: radial-gradient(circle at center top, rgba(255, 0, 128, 0.2), transparent 60%),
-        radial-gradient(circle at center bottom, rgba(0, 128, 255, 0.15), transparent 60%);
+    background-image:
+        radial-gradient(ellipse at top center, rgba(255, 0, 128, 0.15), transparent 70%),
+        radial-gradient(ellipse at bottom center, rgba(0, 128, 255, 0.1), transparent 70%);
     background-repeat: no-repeat;
     background-size: 100% 400px, 100% 400px;
+    background-position: top center, bottom center;
     color: #fff;
     font-family: 'Inter', sans-serif;
     position: relative;
     overflow-x: hidden;
 }
 
+:root {
+    --main-bg: #1e1414;
+    --main-bg-primary: rgba(154, 154, 162, 0.4);
+    --btn-primary: #ff536b;
+    --btn-secondary: #5581ff;
+    --txt-primary: #ececec;
+    --txt-secondary: rgba(236, 236, 236, 0.8);
+    --txt-third: rgba(236, 236, 236, 0.4);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    background: var(--main-bg);
+    color: var(--txt-primary);
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
 .container {
-    max-width: 1200px;
+    max-width: 1140px;
     /* или 1140px / 1280px — зависит от твоего макета */
     margin: 0 auto;
     padding: 0 20px;
     /* для отступов по бокам на мобильных */
 }
 /* #region header */
+.header{
+padding: 32px 0px 60px 0px;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    justify-content: center;
+    width: 706px;
+    height: 56px;
+    margin: 0 auto;
+}
+
+.header-item {}
+
+.header-link {
+    font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+        color: #ececec;
+}
 /* #endregion header */
 
 /* #region hero */
-/* #endregion hero */
+.hero {}
+
+.container {}
+
+.logo-left {
+    background: linear-gradient(180deg, #ebede3 0%, #ff79d3 51.56%, #ff536b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.logo-right {
+    color: #fff;
+    font-weight: 800;
+}
+.hero-title {}
+
+.hero-text {}
+
+.button {}
 
 /* #region works */
 .gradient-border {
@@ -68,3 +159,4 @@ img {
     /* чтобы убрать скроллбар */
 }
 /* #endregion works */
+/* #endregion hero */
