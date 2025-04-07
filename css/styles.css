@@ -1,0 +1,56 @@
+body {
+    background-color: #0f0f10;
+    /* тёмная база */
+    background-image: radial-gradient(circle at center top, rgba(255, 0, 128, 0.2), transparent 60%),
+        radial-gradient(circle at center bottom, rgba(0, 128, 255, 0.15), transparent 60%);
+    background-repeat: no-repeat;
+    background-size: 100% 400px, 100% 400px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    /* или 1140px / 1280px — зависит от твоего макета */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* для отступов по бокам на мобильных */
+}
+/* #region header */
+/* #endregion header */
+
+/* #region hero */
+/* #endregion hero */
+
+/* #region works */
+.works_container {
+    max-width: 1200px;
+    border-radius: 24px;
+    border: #fff solid 1px;
+    background-color: rgba(172, 172, 172, 0.2);
+        padding: 24px 0px 60px 0px;
+
+
+}
+.carousel {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+}
+
+.carousel img {
+    flex: 0 0 auto;
+    width: 300px;
+    /* или любой нужный размер */
+    border-radius: 12px;
+    scroll-snap-align: start;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+    /* чтобы убрать скроллбар */
+}
+/* #endregion works */
