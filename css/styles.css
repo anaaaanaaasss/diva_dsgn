@@ -71,7 +71,7 @@ button {
 
 /* #region header */
 .header{
-    padding: 32px 0;
+    padding-top: 32px;
 }
 
 .header-list {
@@ -98,7 +98,7 @@ button {
 
 /* #region hero */
 .hero {
-    margin-top: -32px;
+    padding-top: 60px;
     position: relative;
 }
 
