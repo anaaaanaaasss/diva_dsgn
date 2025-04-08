@@ -85,6 +85,9 @@ padding: 32px 0px 60px 0px;
 .header-item {}
 
 .header-link {
+    width: 123px;
+    height: 56px;
+    padding: 16px 24px;
     font-weight: 700;
         font-size: 20px;
         line-height: 1.2;
@@ -96,49 +99,99 @@ padding: 32px 0px 60px 0px;
 /* #region hero */
 .hero {}
 
-.container {}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.logo {
+    margin-bottom: 32px;
+}
 .logo-left {
     background: linear-gradient(180deg, #ebede3 0%, #ff79d3 51.56%, #ff536b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 800;
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .logo-right {
     color: #fff;
-    font-weight: 800;
+    font-weight: 700;
+    font-size: 23px;
 }
-.hero-title {}
+.hero-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.25;
+    text-align: center;
+    color: #ececec;
+    max-width: 1012px;
+    margin-bottom: 16px;
+}
 
-.hero-text {}
+.hero-text {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.36111;
+    text-align: center;
+    color: rgba(236, 236, 236, 0.8);
+    margin-bottom: 32px;
+    max-width: 838px;
+}
 
-.button {}
+.hero-button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: #ececec;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    background: linear-gradient(305deg, #ff536b 0%, rgba(255, 83, 107, 0.58) 100%);
+    border-radius: 100px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+
+}
+
+.saldo {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+}
 
 /* #region works */
 .gradient-border {
+    overflow: hidden;
+    box-sizing: border-box;
     padding: 2px;
     border-radius: 24px;
     background:
     linear-gradient(228deg, rgba(255, 83, 107, 0) 0%, #ff0024 49.47%, rgba(255, 83, 107, 0) 100%),
     
-        linear-gradient(135deg, #5581ff 0%, rgba(255, 255, 255, 0.19) 40.62%);
+    linear-gradient(135deg, #5581ff 0%, rgba(255, 255, 255, 0.19) 40.62%);
     display: inline-block;
 }
 
 .works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1200px;
     border-radius: 24px;
-    padding: 24px 32px;
+    padding: 24px 32px 60px 32px;
     background: linear-gradient(to bottom, rgb(0, 0, 0, .2), rgb(236 230 233 / 19%));
 }
 
 .carousel {
     display: flex;
     gap: 32px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     padding: 20px 0;
+    width: 200%; /* добавлено */
 }
 
 img {
@@ -152,11 +205,27 @@ img {
     width: 300px;
     /* или любой нужный размер */
     border-radius: 12px;
-    scroll-snap-align: start;
+    flex-shrink: 0;
 }
 .carousel::-webkit-scrollbar {
     display: none;
     /* чтобы убрать скроллбар */
+}
+
+.hero-button-2 {
+    
+    background: rgba(154, 154, 162, 0.4);
+    border-radius: 100px;
+    padding: 16px 24px;
+    margin-top: 60px;
+}
+
+.hero-btn-2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: #ececec;
 }
 /* #endregion works */
 /* #endregion hero */

@@ -24,6 +24,37 @@
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .carousel-left {
+        display: flex;
+        gap: 20px;
+        animation: scrollLeft 60s linear infinite;
+      }
+
+      .carousel-right {
+        display: flex;
+        gap: 20px;
+        animation: scrollRight 60s linear infinite;
+      }
+
+      @keyframes scrollLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes scrollRight {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(50%);
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -44,10 +75,10 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
+        <div class="hero-container container">
           <a class="logo" href="./index.html"
             ><span class="logo-left">Diva</span
-            ><span class="logo-rigth">DSGN</span></a
+            ><span class="logo-right">DSGN</span></a
           >
           <h1 class="hero-title">
             One fixed fee a month gets you unlimited design goodness.
@@ -56,28 +87,31 @@
             Feel free to ask for changes a bazillion times —we've got you
             covered!
           </p>
-          <button class="button" type="submit"></button>
-          <h3>return</h3>
-          <div class="gradient-border">
+          <button class="hero-button" type="button">Book 15-min call</button>
+          <h3 class="saldo">2 slots remaining</h3>
+          <div class="gradient-border" style="overflow: hidden">
             <div class="works-container">
-              <div class="carousel">
+              <div class="carousel carousel-left">
                 <img src="./img/pic_1.png" alt="" width="346px" />
                 <img src="./img/pic_2.png" alt="" width="346px" />
                 <img src="./img/pic_3.png" alt="" width="346px" />
                 <img src="./img/pic_4.png" alt="" width="346px" />
               </div>
-              <div class="carousel">
+              <div class="carousel carousel-right">
                 <img src="./img/pic_5.png" alt="" width="346px" />
                 <img src="./img/pic_6.png" alt="" width="346px" />
                 <img src="./img/pic_7.png" alt="" width="346px" />
                 <img src="./img/pic_8.png" alt="" width="346px" />
               </div>
-              <div class="carousel">
+              <div class="carousel carousel-left">
                 <img src="./img/pic_9.png" alt="" width="346px" />
                 <img src="./img/pic_10.png" alt="" width="346px" />
                 <img src="./img/pic_11.png" alt="" width="346px" />
                 <img src="./img/pic_12.png" alt="" width="346px" />
               </div>
+              <button class="hero-button-2" type="button">
+                <a href="" class="hero-btn-2">View recent works</a>
+              </button>
             </div>
           </div>
         </div>
@@ -92,5 +126,11 @@
       <section></section>
     </main>
     <footer></footer>
+    <script>
+      document.querySelectorAll(".carousel").forEach((carousel) => {
+        const clone = carousel.innerHTML;
+        carousel.innerHTML += clone;
+      });
+    </script>
   </body>
 </html>
