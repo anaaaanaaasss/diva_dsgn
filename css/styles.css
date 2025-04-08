@@ -11,22 +11,9 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
-:root {
-    --main-bg: #1e1414;
-    --main-bg-primary: rgba(154, 154, 162, 0.4);
-    --btn-primary: #ff536b;
-    --btn-secondary: #5581ff;
-    --txt-primary: #ececec;
-    --txt-secondary: rgba(236, 236, 236, 0.8);
-    --txt-third: rgba(236, 236, 236, 0.4);
-}
-
 body {
     font-family: "Poppins", sans-serif;
     position: relative;
-    background: var(--main-bg);
-    color: var(--txt-primary);
     padding: 0;
     margin: 0;
 }
@@ -43,7 +30,7 @@ body::before {
     background-size: cover;
     background-position: top center;
 }
-ё
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -73,6 +60,7 @@ img {
 button {
     cursor: pointer;
 }
+
 .container {
     max-width: 1140px;
     /* или 1140px / 1280px — зависит от твоего макета */
@@ -80,6 +68,7 @@ button {
     padding: 0 20px;
     /* для отступов по бокам на мобильных */
 }
+
 /* #region header */
 .header{
     padding: 32px 0;
@@ -94,8 +83,6 @@ button {
     height: 56px;
     margin: 0 auto;
 }
-
-.header-item {}
 
 .header-link {
     width: 123px;
@@ -181,15 +168,30 @@ button {
 }
 
 /* #region works */
-.gradient-border {
-    overflow: hidden;
-    padding: 2px;
-    border-radius: 24px;
-    background:
-    linear-gradient(228deg, rgba(255, 83, 107, 0) 0%, #ff0024 49.47%, rgba(255, 83, 107, 0) 100%),
+.works-border {
     
-    linear-gradient(135deg, #5581ff 0%, rgba(255, 255, 255, 0.19) 40.62%);
+    position: relative;
+    border-radius: 24px;
+    padding: 2px;
     display: inline-block;
+    background: transparent;
+    overflow: hidden;
+}
+
+.works-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg, #FF536B, #FFFBFB);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .works-container {
@@ -197,9 +199,10 @@ button {
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
-    border-radius: 24px;
+    border-radius: 24px; 
     padding: 24px 32px 60px 32px;
     background: linear-gradient(to bottom, rgb(0, 0, 0, .2), rgb(236 230 233 / 19%));
+    
 }
 
 .carousel {
