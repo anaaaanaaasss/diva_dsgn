@@ -57,6 +57,7 @@
     </style>
   </head>
   <body>
+      <!-- #region header -->
     <header class="header">
       <div class="container">
         <ul class="header-list">
@@ -73,8 +74,10 @@
         </ul>
       </div>
     </header>
+    <!-- #endregion header -->
     <main>
-      <section class="hero">
+      <!-- #region hero -->
+        <section class="hero">
         <div class="hero-container container">
           <a class="logo" href="./index.html"
             ><span class="logo-left">Diva</span
@@ -116,22 +119,40 @@
           </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
+      <!-- #endregion hero -->
+      <!-- #region contribution -->
+      <section class="contribution"></section>
+      <!-- #endregion contribution -->
+      <!-- #region membership-perks -->
+      <section class="membership-perks"></section>    
+      <!-- #endregion membership-perks -->
+      <!-- #region how-work -->
+      <section class="how-work"></section>
+      <!-- #endregion how-work -->
+      <!-- #region join -->
+      <section class="join"></section>
+     <!-- #endregion join -->
+      <!-- #region feedback -->
+      <section class="feedback"></section>
+      <!-- #endregion feedback -->
+      <!-- #region plans-pricing -->
+      <section class="plans-pricing"></section>
+      <!-- #endregion plans-pricing -->
+      <!-- #region faq -->
+      <section class="faq"></section>
+      <!-- #endregion faq -->
+      <!-- #region footer -->
     <footer></footer>
-
-    <script>
+      <!-- #endregion footer -->
+    
+      <!-- #region script -->
+     <script>
       document.querySelectorAll(".carousel").forEach((carousel) => {
         const clone = carousel.innerHTML;
         carousel.innerHTML += clone;
       });
     </script>
+    <!-- #endregion script -->
+    
   </body>
 </html>
